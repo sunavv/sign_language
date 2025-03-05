@@ -168,7 +168,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
 # Dictionary for labels
-labels_dict = {0: 'A', 1: 'B', 2: 'C'}
+labels_dict = {i: chr(65 + i) for i in range(26)}
 
 # Parameters for sentence formation
 GESTURE_THRESHOLD_TIME = 1.0  # Time to hold a gesture to confirm it (seconds)
